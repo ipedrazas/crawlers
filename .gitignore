@@ -54,3 +54,7 @@ docs/_build/
 
 FHR
 .vagrant
+Java/bin
+Java/.project
+Java/.settings
+Java/.classpath
