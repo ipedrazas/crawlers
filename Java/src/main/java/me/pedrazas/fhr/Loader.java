@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -18,16 +19,18 @@ public class Loader {
 	
 	public static void main(String[] args){
 		String index = "fhr";
-		String path = "/home/ivan/workspace/crawlers/FHR/2014-07-21";
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");		
+		String dataFolder = formatter.format(new Date());
+		
+		String path = "/home/ivan/workspace/crawlers/FHR/" + dataFolder;
 		Loader l = new Loader(path, index);
 		System.out.println("Processing documents... be patient!");
 		System.out.println((new Date()).toString());
 		l.execute();
 		System.out.println("The Import process is finished, hooray!");
 		System.out.println((new Date()).toString());
-	}
-	
-	
+	}	
 
 	public String getPath() {
 		return path;
