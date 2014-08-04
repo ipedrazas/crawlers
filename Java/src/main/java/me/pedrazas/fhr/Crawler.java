@@ -19,7 +19,7 @@ import org.jsoup.select.Elements;
 public class Crawler {
 	
 	private String path;
-	private String index = "FHR-latest";
+	private String index = "fhr";
 	
 	private List<String> extractedLinks;
 	private List<File> filesToProcess;

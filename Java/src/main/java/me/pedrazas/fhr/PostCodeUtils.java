@@ -57,6 +57,7 @@ public class PostCodeUtils {
      * Check Wikipedia for some discussion on validation.  
      * 
      * @see <a href="http://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom#Validation">Wikipedia</a>  
+     * @see <a href="http://en.wikipedia.org/wiki/List_of_postcode_areas_in_the_United_Kingdom">List of PostCode Areas</a>
      */
     public static boolean validate(String code) {
     	// String regexp="^([A-PR-UWYZ](([0-9](([0-9]|[A-HJKSTUW])?)?)|([A-HK-Y][0-9]([0-9]|[ABEHMNPRVWXY])?)) [0-9][ABD-HJLNP-UW-Z]{2})|GIR 0AA$";
