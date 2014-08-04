@@ -1,4 +1,4 @@
-package me.pedrazas.fhr;
+package me.pedrazas.fhr.om;
 
 import java.util.List;
 

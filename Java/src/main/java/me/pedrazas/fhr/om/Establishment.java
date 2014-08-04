@@ -1,9 +1,11 @@
-package me.pedrazas.fhr;
+package me.pedrazas.fhr.om;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import me.pedrazas.fhr.PostCodeUtils;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
@@ -35,8 +37,17 @@ public class Establishment {
 	private String LocalAuthorityEmailAddress;
 	private String SchemeType;
 	private String outward;
+	private String areacode;
 	
 	
+	public String getAreacode() {
+		return areacode;
+	}
+
+	public void setAreacode(String areacode) {
+		this.areacode = areacode;
+	}
+
 	public static final String type = "establishment"; 
 	
 	public String getOutward() {
@@ -205,10 +216,8 @@ public class Establishment {
 	
 	public JsonElement toJson(){
 		if(this.PostCode != null){
-			String[] pcs = this.PostCode.split(" ");
-			if(pcs != null && pcs.length > 0){
-				this.outward = pcs[0];
-			}	
+			this.outward = PostCodeUtils.getOutward(this.PostCode);
+			this.areacode = PostCodeUtils.getAreaCode(this.PostCode);
 		}
 		if(this.RatingDate.isEmpty()){
 			this.RatingDate = null;

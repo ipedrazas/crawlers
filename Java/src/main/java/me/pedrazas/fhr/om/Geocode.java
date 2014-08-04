@@ -1,4 +1,4 @@
-package me.pedrazas.fhr;
+package me.pedrazas.fhr.om;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

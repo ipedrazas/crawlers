@@ -30,11 +30,18 @@
 		  <version>4.3.4</version>
 		</dependency>
 		<dependency>
+		<groupId>org.jsoup</groupId>
+		<artifactId>jsoup</artifactId>
+		<version>1.7.2</version>
+	</dependency>
+			
+		<dependency>
 	      <groupId>junit</groupId>
 	      <artifactId>junit</artifactId>
 	      <version>3.8.1</version>
 	      <scope>test</scope>
 	    </dependency>
+	    
 	</dependencies>
   <build>
     <plugins>
