@@ -1,0 +1,393 @@
+{
+   "took": 130,
+   "timed_out": false,
+   "_shards": {
+      "total": 1,
+      "successful": 1,
+      "failed": 0
+   },
+   "hits": {
+      "total": 140,
+      "max_score": 5.697146,
+      "hits": [
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "292081",
+            "_score": 5.697146,
+            "_source": {
+               "id": 292081,
+               "LocalAuthorityBusinessID": 515220,
+               "BusinessName": "ALDINGBOURNE COUNTRY CENTRE CAFÉ",
+               "BusinessType": "Restaurant/Cafe/Canteen",
+               "BusinessTypeID": 1,
+               "AddressLine1": "ALDINGBOURNE CENTRE",
+               "AddressLine2": "BLACKMILL LANE",
+               "AddressLine3": "NORTON CHICHESTER",
+               "PostCode": "PO18 0JP",
+               "RatingValue": 5,
+               "RatingKey": "fhrs_5_en-GB",
+               "RatingDate": "2014-01-10",
+               "LocalAuthorityCode": 324,
+               "LocalAuthorityName": "Arun",
+               "LocalAuthorityWebSite": "http://www.arun.gov.uk",
+               "LocalAuthorityEmailAddress": "food.safety@arun.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 5,
+                  "Structural": 0,
+                  "ConfidenceInManagement": 5
+               },
+               "Geocode": {
+                  "lon": -0.678103,
+                  "lat": 50.856518
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "26012",
+            "_score": 5.697146,
+            "_source": {
+               "id": 26012,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "The New Boathouse",
+               "BusinessType": "Hotel/bed & breakfast/guest house",
+               "BusinessTypeID": 7842,
+               "AddressLine1": "Main Road Bosham Chichester West Sussex",
+               "PostCode": "PO18 8EH",
+               "RatingValue": 5,
+               "RatingKey": "fhrs_5_en-GB",
+               "RatingDate": "2012-01-24",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 5,
+                  "Structural": 5,
+                  "ConfidenceInManagement": 0
+               },
+               "Geocode": {
+                  "lon": -0.836114,
+                  "lat": 50.838497
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "147478",
+            "_score": 5.697146,
+            "_source": {
+               "id": 147478,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "The Old Store Guest House",
+               "BusinessType": "Hotel/bed & breakfast/guest house",
+               "BusinessTypeID": 7842,
+               "AddressLine1": "Halnaker Boxgrove Chichester West Sussex",
+               "PostCode": "PO18 0QL",
+               "RatingValue": 5,
+               "RatingKey": "fhrs_5_en-GB",
+               "RatingDate": "2013-10-25",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 0,
+                  "Structural": 0,
+                  "ConfidenceInManagement": 0
+               },
+               "Geocode": {
+                  "lon": -0.712576,
+                  "lat": 50.865086
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "147664",
+            "_score": 5.697146,
+            "_source": {
+               "id": 147664,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "The Partridge Inn",
+               "BusinessType": "Pub/bar/nightclub",
+               "BusinessTypeID": 7843,
+               "AddressLine1": "The Grove Singleton Chichester West Sussex",
+               "PostCode": "PO18 0EY",
+               "RatingValue": 5,
+               "RatingKey": "fhrs_5_en-GB",
+               "RatingDate": "2014-07-29",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 0,
+                  "Structural": 5,
+                  "ConfidenceInManagement": 0
+               },
+               "Geocode": {
+                  "lon": -0.753329,
+                  "lat": 50.910465
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "147575",
+            "_score": 5.697146,
+            "_source": {
+               "id": 147575,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "The Royal Oak",
+               "BusinessType": "Pub/bar/nightclub",
+               "BusinessTypeID": 7843,
+               "AddressLine1": "Pook Lane Lavant Chichester West Sussex",
+               "PostCode": "PO18 0AX",
+               "RatingValue": 3,
+               "RatingKey": "fhrs_3_en-GB",
+               "RatingDate": "2013-10-04",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 10,
+                  "Structural": 5,
+                  "ConfidenceInManagement": 10
+               },
+               "Geocode": {
+                  "lon": -0.77452,
+                  "lat": 50.86939
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "148261",
+            "_score": 5.697146,
+            "_source": {
+               "id": 148261,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "The Star And Garter",
+               "BusinessType": "Pub/bar/nightclub",
+               "BusinessTypeID": 7843,
+               "AddressLine1": "East Dean Chichester West Sussex",
+               "PostCode": "PO18 0JG",
+               "RatingValue": 4,
+               "RatingKey": "fhrs_4_en-GB",
+               "RatingDate": "2013-01-17",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 5,
+                  "Structural": 10,
+                  "ConfidenceInManagement": 5
+               },
+               "Geocode": {
+                  "lon": -0.7147465,
+                  "lat": 50.90968
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "28492",
+            "_score": 5.697146,
+            "_source": {
+               "id": 28492,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "The Village Shop And Tea Room",
+               "BusinessType": "Restaurant/Cafe/Canteen",
+               "BusinessTypeID": 1,
+               "AddressLine1": "The Square Compton Chichester West Sussex",
+               "PostCode": "PO18 9HA",
+               "RatingValue": 5,
+               "RatingKey": "fhrs_5_en-GB",
+               "RatingDate": "2012-08-29",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 0,
+                  "Structural": 0,
+                  "ConfidenceInManagement": 0
+               },
+               "Geocode": {
+                  "lon": -0.896728,
+                  "lat": 50.927628
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "535156",
+            "_score": 5.697146,
+            "_source": {
+               "id": 535156,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "Tinwood Vineyard",
+               "BusinessType": "Retailers - other",
+               "BusinessTypeID": 4613,
+               "AddressLine1": "Tinwood Estate Tinwood Lane Halnaker Boxgrove Chichester West Sussex",
+               "PostCode": "PO18 0NE",
+               "RatingValue": 5,
+               "RatingKey": "fhrs_5_en-GB",
+               "RatingDate": "2014-05-23",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 5,
+                  "Structural": 5,
+                  "ConfidenceInManagement": 0
+               },
+               "Geocode": {
+                  "lon": -0.703936,
+                  "lat": 50.865128
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "147493",
+            "_score": 5.697146,
+            "_source": {
+               "id": 147493,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "Victoria Inn",
+               "BusinessType": "Pub/bar/nightclub",
+               "BusinessTypeID": 7843,
+               "AddressLine1": "West Marden West Sussex",
+               "PostCode": "PO18 9EN",
+               "RatingValue": 4,
+               "RatingKey": "fhrs_4_en-GB",
+               "RatingDate": "2012-11-29",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 0,
+                  "Structural": 10,
+                  "ConfidenceInManagement": 0
+               },
+               "Geocode": {
+                  "lon": -0.9026783,
+                  "lat": 50.91664
+               }
+            }
+         },
+         {
+            "_index": "fhr",
+            "_type": "establishment",
+            "_id": "552840",
+            "_score": 5.697146,
+            "_source": {
+               "id": 552840,
+               "LocalAuthorityBusinessID": 0,
+               "BusinessName": "Village Shop",
+               "BusinessType": "Retailers - other",
+               "BusinessTypeID": 4613,
+               "AddressLine1": "The Funtington Larder Fox And Hounds Common Road Funtington Chichester West Sussex",
+               "PostCode": "PO18 9LL",
+               "RatingValue": 1,
+               "RatingKey": "fhrs_1_en-GB",
+               "RatingDate": "2013-06-05",
+               "LocalAuthorityCode": 325,
+               "LocalAuthorityName": "Chichester",
+               "LocalAuthorityWebSite": "http://www.chichester.gov.uk",
+               "LocalAuthorityEmailAddress": "environmentalhealth@chichester.gov.uk",
+               "SchemeType": "FHRS",
+               "outward": "PO18",
+               "areacode": "PO",
+               "Scores": {
+                  "Hygiene": 10,
+                  "Structural": 15,
+                  "ConfidenceInManagement": 20
+               },
+               "Geocode": {
+                  "lon": -0.864288,
+                  "lat": 50.869072
+               }
+            }
+         }
+      ]
+   },
+   "aggregations": {
+      "Food_hygiene_ratings": {
+         "buckets": [
+            {
+               "key": 5,
+               "key_as_string": "5",
+               "doc_count": 93
+            },
+            {
+               "key": 4,
+               "key_as_string": "4",
+               "doc_count": 27
+            },
+            {
+               "key": 0,
+               "key_as_string": "0",
+               "doc_count": 12
+            },
+            {
+               "key": 3,
+               "key_as_string": "3",
+               "doc_count": 5
+            },
+            {
+               "key": 2,
+               "key_as_string": "2",
+               "doc_count": 2
+            },
+            {
+               "key": 1,
+               "key_as_string": "1",
+               "doc_count": 1
+            }
+         ]
+      }
+   }
+}

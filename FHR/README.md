@@ -139,3 +139,25 @@ Creating the ElasticSearch Index is not complicated:
 The Java code is completed, the python is work in progress and it only downloads the dataset.
 
 If you run the me.pedrazas.fhr.LanuchCrawler class it will do everything for you. Once you have the data inserted into ElasticSearch you can start quering the index.
+
+## ElasticSearch Queries
+
+### Aggregate Ratings by PostCode starting by 'PO18'
+
+    GET _search
+    {
+
+       "query" : {
+          "match" : { "PostCode" : "PO18*"}
+           },
+       "aggs" : {
+            "Food_hygiene_ratings" : {
+               "terms" : {
+                 "field" : "RatingValue"
+               }
+            }
+          }
+    }
+
+You can look at the results [in this file](results/result-query01.json)
+
