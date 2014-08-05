@@ -159,5 +159,5 @@ If you run the me.pedrazas.fhr.LanuchCrawler class it will do everything for you
           }
     }
 
-You can look at the results [in this file](results/result-query01.json)
+You can look at the results [in this file](results/result-query1.json)
 
