@@ -159,5 +159,199 @@ If you run the me.pedrazas.fhr.LanuchCrawler class it will do everything for you
           }
     }
 
-You can look at the results [in this file](results/result-query1.json)
+You can look at the results [in this file](results/result-query1.json). The aggregations are at the bottom:
 
+    "aggregations": {
+          "Food_hygiene_ratings": {
+             "buckets": [
+                {
+                   "key": 5,
+                   "key_as_string": "5",
+                   "doc_count": 93
+                },
+                {
+                   "key": 4,
+                   "key_as_string": "4",
+                   "doc_count": 27
+                },
+                {
+                   "key": 0,
+                   "key_as_string": "0",
+                   "doc_count": 12
+                },
+                {
+                   "key": 3,
+                   "key_as_string": "3",
+                   "doc_count": 5
+                },
+                {
+                   "key": 2,
+                   "key_as_string": "2",
+                   "doc_count": 2
+                },
+                {
+                   "key": 1,
+                   "key_as_string": "1",
+                   "doc_count": 1
+                }
+             ]
+          }
+       }
+
+What about the average?
+
+    GET _search
+    {
+
+       "query" : {
+          "match" : { "PostCode" : "PO18*"}
+           },
+       "aggs" : {
+            "Food_hygiene_ratings" : {
+               "terms" : {
+                 "field" : "RatingValue"
+               }
+            },
+
+            "avg_rating" : {
+              "avg" : {
+                "field" : "RatingValue" }
+
+            }
+          }
+    }
+
+Results [in this other file](results/result-query2.json). As you can see, the only difference is this entry:
+
+       "aggregations": {
+          "avg_rating": {
+             "value": 4.235714285714286
+          },
+
+This is fine, but what about getting all the ratings for the postcodes? the catch here is to realise that we need either the area code (PO) or the outward (PO18) of the postcode. The following query returns the **top** results:
+
+    GET _search
+    {
+
+       "aggs" : {
+            "Food_hygiene_ratings" : {
+               "terms" : {
+                 "field" : "outward"
+               },
+               "aggs":{
+                 "postcodes":{
+                 "terms" : {
+                   "field" : "RatingValue"
+                  }
+                 }
+                 ,
+
+            "avg_height" : {
+              "avg" : {
+                "field" : "RatingValue" }
+
+            }
+               }
+            }
+          }
+    }
+
+If you want to get all the results, this is the query you need:
+
+    GET _search
+    {
+        "size": 0,
+       "aggs" : {
+            "Food_hygiene_ratings" : {
+               "terms" : {
+                 "field" : "outward",
+                 "size": 0
+               },
+               "aggs":{
+                 "postcodes":{
+                 "terms" : {
+                   "field" : "RatingValue"
+                  }
+                 }
+                 ,
+
+            "avg_height" : {
+              "avg" : {
+                "field" : "RatingValue" }
+
+            }
+               }
+            }
+          }
+    }
+
+Results [in this file](results/result-query3.json). Note that this quite a big file but if you want to create a map per postcode areas, this is your datasource. To be able to find the cleanest post code area, I followed a different technique. First I query per areacode, extracted the best and the worst, and issued another query to get more details of that area.
+
+Why? well, when analysing data you have to make certain asumptions. For me, this one made more sense than getting the aggregations of all the outwards (it helps to reduce rubbish data).
+
+    GET _search
+    {
+
+       "aggs" : {
+            "Food_hygiene_ratings" : {
+               "terms" : {
+                 "field" : "areacode",
+                 "size": 0,
+                 "order": {
+                        "avg_height": "desc"
+                    }
+
+               },
+
+               "aggs":{
+                 "postcodes":{
+                 "terms" : {
+                   "field" : "RatingValue"
+                  }
+                 }
+                 ,
+
+            "avg_height" : {
+              "avg" : {
+                "field" : "RatingValue"
+
+              }
+
+            }
+               }
+            }
+          }
+    }
+
+
+Results [in this file](results/result-query4.json). And from the results I went to get the cleanest (TAUNTON  -- TA3) and the filthiest (HAWICK, NEWCASTLETON -- TD9) using this query:
+
+    GET _search
+    {
+
+        "query" : {
+          "match" : { "areacode" : "td"}
+           },
+       "aggs" : {
+            "Food_hygiene_ratings" : {
+               "terms" : {
+                 "field" : "outward",
+                 "size": 0,
+                 "order": {
+                        "avg_height": "desc"
+                    }
+
+               },
+
+               "aggs":{
+
+                  "avg_height" : {
+                    "avg" : {
+                      "field" : "RatingValue"
+                    }
+
+                  }
+               }
+          }
+        }
+    }
