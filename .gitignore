@@ -52,9 +52,8 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-FHR
 .vagrant
-Java/bin
-Java/.project
-Java/.settings
-Java/.classpath
+FHR/Java/bin
+FHR/Java/.project
+FHR/Java/.settings
+FHR/Java/.classpath
